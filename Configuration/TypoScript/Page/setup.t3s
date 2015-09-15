@@ -1,0 +1,63 @@
+page = PAGE
+page {
+
+	// Add the icon that will appear in front of the url in the browser
+	// This icon will also be used for the bookmark menu in browsers
+	shortcutIcon = {$folders.public}/favicon.ico
+
+	headerData {
+		// Page title
+		10 = COA
+		10 {
+			wrap = <title> | </title>
+
+			10 = TEXT
+			10.field = subtitle // title
+
+			20 = TEXT
+			20.value = /
+			20.noTrimWrap = | | |
+
+			30 = TEXT
+			30.value < sitetitle
+		}
+	}
+
+	includeCSS {
+		10 = {$folders.css}/screen.css
+	}
+
+	10 = CASE
+	10 {
+		key.field = layout
+
+		# 1 = FLUIDTEMPLATE
+		# 1 {
+		# 	file = {$default.ext.templates}Blank.html
+		# }
+
+		default = FLUIDTEMPLATE
+		default {
+			file = EXT:qxgo/Resources/Private/Templates/Default.html
+
+			layoutRootPaths {
+				10 = EXT:qxgo/Resources/Private/Layouts
+				20 = {$folders.layouts}
+			}
+
+			templateRootPaths {
+				10 = EXT:qxgo/Resources/Private/Templates
+				20 = {$folders.templates}
+			}
+
+			partialRootPaths = {
+				10 = EXT:qxgo/Resources/Private/Partials
+				20 = {$folders.partials}
+			}
+
+			variables {
+				content < lib.content
+			}
+		}
+	}
+}

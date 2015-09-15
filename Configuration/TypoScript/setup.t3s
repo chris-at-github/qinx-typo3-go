@@ -1,0 +1,3 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:qxgo/Configuration/TypoScript/Config/setup.t3s">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:qxgo/Configuration/TypoScript/Page/setup.t3s">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:qxgo/Configuration/TypoScript/Block/setup.t3s">
