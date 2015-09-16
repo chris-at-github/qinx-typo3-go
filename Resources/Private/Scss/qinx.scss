@@ -5,6 +5,7 @@
 @import '_normalize.scss';
 @import '_grid.scss';
 @import '_form.scss';
+@import '_navigation.scss';
 
 // Html
 // ----------------------------------------------------------------------------------------------------------------
@@ -45,5 +46,17 @@ nav {
 		&:hover, &:focus, &:active {
 			text-decoration: none;
 		}
+	}
+}
+
+// Layout
+// ----------------------------------------------------------------------------------------------------------------
+#navigation-main {
+	.navigation {
+		@include clearfix();
+	}
+
+	ul {
+		float: right;
 	}
 }

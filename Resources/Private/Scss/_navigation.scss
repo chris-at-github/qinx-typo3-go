@@ -1,0 +1,16 @@
+.navigation {
+	a {
+		display: block;
+	}
+}
+
+.navigation-horizontal {
+	& > ul {
+		@include clearfix;
+	}
+
+	& > ul > li {
+		float: left;
+		padding: 0 5px;
+	}
+}

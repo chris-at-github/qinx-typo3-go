@@ -54,11 +54,6 @@ page {
 				10 = EXT:qxgo/Resources/Private/Partials
 				20 = {$folders.partials}
 			}
-
-			variables {
-				logo < lib.logo
-				content < lib.content
-			}
 		}
 	}
 }

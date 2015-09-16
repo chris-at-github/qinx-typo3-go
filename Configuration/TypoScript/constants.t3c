@@ -44,9 +44,9 @@ config {
 	absRefPrefix = /
 }
 
-menu {
-	# cat=menus; type=int+; label=Main-menu folder page: Page id of the folder which contains the main-menu.
-	main = 0
+navigation {
+	# cat=navigation; type=int+; label=Main-Navigation folder page: Page id of the folder which contains the main-navigation.
+	main = 3
 }
 
 pages {
