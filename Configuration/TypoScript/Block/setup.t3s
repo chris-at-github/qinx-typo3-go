@@ -1,13 +1,16 @@
+# Logo
+# ----------------------------------------------------------------------------------------------------------------
 lib.logo = TEXT
 lib.logo {
 	value < sitetitle
-  wrap = <div id="logo">|</div>
 
 	typolink {
 		ATagBeforeWrap = 1
-		wrap = <img src="{$folders.images}/go.svg" alt="|" />
+		wrap = <img src="{$folders.images}/logo.png" alt="|" />
 		parameter = {$pages.home}
 	}
 }
 
+# Contents
+# ----------------------------------------------------------------------------------------------------------------
 lib.content < styles.content.get
