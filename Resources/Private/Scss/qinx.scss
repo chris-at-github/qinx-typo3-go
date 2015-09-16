@@ -1,2 +1,29 @@
-* {
+// Import
+// ----------------------------------------------------------------------------------------------------------------
+@import '_variables.scss';
+@import '_mixins.scss';
+@import '_normalize.scss';
+@import '_grid.scss';
+@import '_form.scss';
+
+// Html
+// ----------------------------------------------------------------------------------------------------------------
+body {
+  margin: 10px;
+  @include font-default();
+}
+
+p, table, ul, ol, dl, fieldset {
+	margin: 10px 0;
+}
+
+a {
+	& {
+		color: $color-brand;
+		text-decoration: none;
+	}
+
+	&:hover, &:focus {
+		color: $color-brand-dark;
+	}
 }
