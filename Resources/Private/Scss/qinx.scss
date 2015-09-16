@@ -27,3 +27,23 @@ a {
 		color: $color-brand-dark;
 	}
 }
+
+nav {
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	li {
+		margin: 0;
+		padding: 0;
+		background: none;
+	}
+
+	a {
+		&:hover, &:focus, &:active {
+			text-decoration: none;
+		}
+	}
+}
