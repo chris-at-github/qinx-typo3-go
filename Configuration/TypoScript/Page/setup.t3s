@@ -50,7 +50,7 @@ page {
 				20 = {$folders.templates}
 			}
 
-			partialRootPaths = {
+			partialRootPaths {
 				10 = EXT:qxgo/Resources/Private/Partials
 				20 = {$folders.partials}
 			}
