@@ -10,7 +10,7 @@ navigation.default = HMENU
 navigation.default {
 	1 = TMENU
 	1 {
-		wrap = <ul> | </ul>
+		wrap = <nav class="navigation"><ul> | </ul></nav>
 
 		// Always unfold all sub-levels of the menu
 		expAll = 1
@@ -46,4 +46,23 @@ navigation.default {
 }
 
 
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:qxgo/Configuration/TypoScript/Navigation/Main/setup.t3s">
+// Start with copying our default menu configuration so we don't have to repeat our selves (except in the explanation, didn't I already mention this?) ;-)
+navigation.main < navigation.default
+navigation.main {
+	// Create a menu out of the pages specifically listed under special.value
+	special = directory
+	special.value = {$navigation.main}
+
+	2 < .1
+	1.wrap = <nav class="navigation navigation-horizontal"><ul> | </ul></nav>
+}
+
+// Start with copying our default menu configuration so we don't have to repeat our selves (except in the explanation, didn't I already mention this?) ;-)
+navigation.footer < navigation.default
+navigation.footer {
+	// Create a menu out of the pages specifically listed under special.value
+	special = directory
+	special.value = {$navigation.footer}
+
+	1.wrap = <nav class="navigation navigation-horizontal"><ul> | </ul></nav>
+}

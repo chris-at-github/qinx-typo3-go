@@ -47,6 +47,9 @@ config {
 navigation {
 	# cat=navigation; type=int+; label=Main-Navigation folder page: Page id of the folder which contains the main-navigation.
 	main = 3
+
+	# cat=navigation; type=int+; label=Footer-Navigation folder page: Page id of the folder which contains the footer-navigation.
+	footer = 7
 }
 
 pages {
