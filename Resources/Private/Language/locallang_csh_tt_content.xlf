@@ -3,11 +3,8 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2015-09-18T09:45:34Z" product-name="qxgo">
 		<header/>
 		<body>
-			<trans-unit id="tx_qxgo_domain_model_content">
-				<source>Content</source>
-			</trans-unit>
-			<trans-unit id="tx_qxgo_domain_model_content.header_as_class">
-				<source>Header As Class</source>
+			<trans-unit id="header_as_class.description">
+				<source>Use header type as css class</source>
 			</trans-unit>
 		</body>
 	</file>

@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2015-09-14T07:32:08Z" product-name="qxgo">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-09-18T09:45:34Z" product-name="qxgo">
 		<header/>
 		<body>
+			<trans-unit id="tx_qxgo_domain_model_content.header_as_class">
+				<source>Header as Class</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

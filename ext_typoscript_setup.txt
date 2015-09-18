@@ -1,0 +1,15 @@
+
+config.tx_extbase{
+    persistence{
+        classes{
+
+            Qinx\Qxgo\Domain\Model\Content {
+                mapping {
+                    tableName = tt_content
+                    recordType = Tx_Qxgo_Content
+                }
+            }
+            
+    	}
+    }
+}

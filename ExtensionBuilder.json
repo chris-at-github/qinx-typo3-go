@@ -1,5 +1,56 @@
 {
-    "modules": [],
+    "modules": [
+        {
+            "config": {
+                "position": [
+                    120,
+                    99
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": false,
+                    "_default1_show": false,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": []
+                },
+                "name": "Content",
+                "objectsettings": {
+                    "addDeletedField": false,
+                    "addHiddenField": false,
+                    "addStarttimeEndtimeFields": false,
+                    "aggregateRoot": false,
+                    "categorizable": false,
+                    "description": "",
+                    "mapToTable": "tt_content",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "1215449988626"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Use header type as css class",
+                            "propertyIsExcludeField": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "headerAsClass",
+                            "propertyType": "Boolean",
+                            "uid": "768825924116"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": []
+                }
+            }
+        }
+    ],
     "properties": {
         "backendModules": [],
         "description": "",
@@ -16,7 +67,7 @@
         },
         "extensionKey": "qxgo",
         "name": "Go",
-        "originalExtensionKey": "",
+        "originalExtensionKey": "qxgo",
         "persons": [
             {
                 "company": "Qinx",
@@ -30,7 +81,7 @@
     },
     "wires": [],
     "log": {
-        "last_modified": "2015-09-14 07:32",
+        "last_modified": "2015-09-18 09:45",
         "extension_builder_version": "6.2.0",
         "be_user": " (1)"
     }
