@@ -1,50 +1,9 @@
 // Import
 // ----------------------------------------------------------------------------------------------------------------
-@import '_variables.scss';
-@import '_mixins.scss';
-@import '_normalize.scss';
-@import '_grid.scss';
-@import '_form.scss';
-@import '_navigation.scss';
-
-// Html
-// ----------------------------------------------------------------------------------------------------------------
-body {
-  margin: 10px;
-  @include font-default();
-}
-
-p, table, ul, ol, dl, fieldset {
-	margin: 10px 0;
-}
-
-a {
-	& {
-		color: $color-brand;
-		text-decoration: none;
-	}
-
-	&:hover, &:focus {
-		color: $color-brand-dark;
-	}
-}
-
-nav {
-	ul {
-		margin: 0;
-		padding: 0;
-		list-style: none;
-	}
-
-	li {
-		margin: 0;
-		padding: 0;
-		background: none;
-	}
-
-	a {
-		&:hover, &:focus, &:active {
-			text-decoration: none;
-		}
-	}
-}
+@import 'variables';
+@import 'mixins';
+@import 'normalize';
+@import 'grid';
+@import 'form';
+@import 'navigation';
+@import 'scaffolding';
