@@ -1,1 +1,118 @@
-page.t3s
+// ColPos Liste loeschen, sonst sind nicht angegebene Felder nicht bearbeitbar
+mod.SHARED.colPos_list >
+
+site = Global
+
+# Page Layouts
+TCEFORM.pages.layout {
+	altLabels {
+		2 = Unternehmen
+		3 = Metallbau + Krantechnik
+	}
+	addItems {
+		4 = Dienstleistungen
+		5 = HMR Jacob
+	}
+}
+
+# ttContent Layouts
+TCEFORM.tt_content {
+	header_layout {
+		addItems {
+			90 = Span
+		}
+	}
+
+	section_frame {
+		addItems {
+			90 = Grauer Hintergrund
+			91 = News
+		}
+		removeItems = 1, 10, 11, 12, 20, 21, 66
+	}
+}
+
+# RTE
+RTE {
+	default {
+		contentCSS = fileadmin/Resources/Public/Styles/rte.css
+
+		proc {
+			allowedClasses := addToList(h1, h2, h3, h4)
+			allowedClasses := addToList(text-important, text-small, text-red, text-green, text-yellow, text-orange)
+			allowedClasses := addToList(link-file-pdf)
+
+	    entryHTMLparser_db {
+        tags {
+          span.fixAttrib.style.unset = 1
+          span.rmTagIfNoAttrib = 1
+        }
+	    }
+		}
+
+		buttons.textstyle.tags.span.allowedClasses := addToList(text-important, text-small, text-red, text-green, text-yellow, text-orange)
+		buttons.link.properties.class.allowedClasses := addToList(link-file-pdf)
+		buttons.blockstyle.tags.td.allowedClasses := addToList(text-left, text-center, text-right)
+	}
+
+	classesAnchor {
+		file {
+			class = link-file-pdf
+			type = file
+			image >
+			altText = PDF-Link
+		}
+	}
+
+	classes {
+		h1 {
+			name = Heading 1 (CSS-Class)
+		}
+
+		h2 {
+			name = Heading 2 (CSS-Class)
+		}
+
+		h3 {
+			name = Heading 3 (CSS-Class)
+		}
+
+		h4 {
+			name = Heading 4 (CSS-Class)
+		}
+
+		text-small {
+			name = Kleiner Text
+			value = font-size: 11px;
+		}
+
+		text-important {
+			name = Hervorgeboben
+			value = font-weight: bold; color: #e30613;
+		}
+
+		text-red {
+			name = Text rot
+			value = font-weight: bold; color: #e30613;
+		}
+
+		text-yellow {
+			name = Text gelb
+			value = font-weight: bold; color: #fdc300;
+		}
+
+		text-orange {
+			name = Text orange
+			value = font-weight: bold; color: #ef7d00;
+		}
+
+		text-blue {
+			name = Text blau
+			value = font-weight: bold; color: #294694;
+		}
+
+		link-file-pdf {
+			name = PDF-Link
+		}
+	}
+}
