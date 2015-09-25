@@ -28,3 +28,11 @@ $qxgoContentColumns = array(
 	'header_as_class;LLL:EXT:qxgo/Resources/Private/Language/locallang_db.xlf:tx_qxgo_domain_model_content.header_as_class',
 	'after:header_layout'
 );
+
+// Add fields to backend for all record types.
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+	'tt_content',
+	'headers',
+	'header_as_class;LLL:EXT:qxgo/Resources/Private/Language/locallang_db.xlf:tx_qxgo_domain_model_content.header_as_class',
+	'after:header_layout'
+);
