@@ -1,26 +1,27 @@
 // ColPos Liste loeschen, sonst sind nicht angegebene Felder nicht bearbeitbar
 mod.SHARED.colPos_list >
 
-site = Global
-
 # Page Layouts
-TCEFORM.pages.layout {
-	altLabels {
-		2 = Unternehmen
-		3 = Metallbau + Krantechnik
-	}
-	addItems {
-		4 = Dienstleistungen
-		5 = HMR Jacob
-	}
-}
+# TCEFORM.pages.layout {
+# 	altLabels {
+# 		2 = Unternehmen
+# 		3 = Metallbau + Krantechnik
+# 	}
+# 	addItems {
+# 		4 = Dienstleistungen
+# 		5 = HMR Jacob
+# 	}
+# }
 
 # ttContent Layouts
 TCEFORM.tt_content {
-	header_layout {
+	layout {
 		addItems {
-			90 = Span
+			10 = Volle Breite
+			11 = Normale Breite
+			12 = Schmalle Breite
 		}
+		removeItems = 1,2,3
 	}
 
 	section_frame {
