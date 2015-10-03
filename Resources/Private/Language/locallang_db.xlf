@@ -6,6 +6,16 @@
 			<trans-unit id="tx_qxgo_domain_model_content.header_as_class">
 				<source>Header as Class</source>
 			</trans-unit>
+
+			<trans-unit id="tx_qxgo_tt_content.layout_indent_null">
+				<source>Full Width</source>
+			</trans-unit>
+			<trans-unit id="tx_qxgo_tt_content.layout_indent_normal">
+				<source>Normal Width</source>
+			</trans-unit>
+			<trans-unit id="tx_qxgo_tt_content.layout_indent_small">
+				<source>Small Width</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

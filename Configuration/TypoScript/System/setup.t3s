@@ -45,26 +45,31 @@ lib.stdheader {
 # 	81.20.10.value = csc-default arrowbutton
 # }
 
-# tt_content.stdWrap.outerWrap < tt_content.stdWrap.innerWrap
-# tt_content.stdWrap.innerWrap.cObject = CASE
-# tt_content.stdWrap.innerWrap.cObject {
-# 	default {
-# 		10.cObject.default.value = <div
-# 	}
+tt_content.stdWrap.outerWrap < tt_content.stdWrap.innerWrap
+tt_content.stdWrap.innerWrap.cObject = CASE
+tt_content.stdWrap.innerWrap.cObject {
+	default {
+		10.cObject.default.value = <div
+	}
 
-#   key.field = layout
+  key.field = layout
 
-#   1 < .default
-#   1 {
-#   	20.10.value = csc-indent csc-indent-normal
-#   }
+  10 < .default
+  10 {
+  	20.10.value = inner indent-null
+  }
 
-#   2 < .default
-#   2 {
-#   	20.10.value = csc-indent csc-indent-null
-#   }
+  11 < .default
+  11 {
+  	20.10.value = inner indent-normal
+  }
 
-#   default {
-#   	20.10.value = csc-indent csc-indent-small
-#   }
-# }
+  12 < .default
+  12 {
+  	20.10.value = inner indent-small
+  }
+
+  default {
+  	20.10.value = inner
+  }
+}
