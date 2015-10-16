@@ -28,22 +28,11 @@ lib.stdheader {
 }
 
 
-# tt_content.stdWrap.innerWrap.cObject = CASE
-# tt_content.stdWrap.innerWrap.cObject {
-# #   key.field = section_frame
-
-# 	78 =< tt_content.stdWrap.innerWrap.cObject.default
-# 	78.20.10.value = csc-default grey-border
-
-# 	79 =< tt_content.stdWrap.innerWrap.cObject.default
-# 	79.20.10.value = csc-default teaser
-
-# 	80 =< tt_content.stdWrap.innerWrap.cObject.default
-# 	80.20.10.value = csc-default no-shadow
-
-# 	81 =< tt_content.stdWrap.innerWrap.cObject.default
-# 	81.20.10.value = csc-default arrowbutton
-# }
+tt_content.stdWrap.innerWrap.cObject = CASE
+tt_content.stdWrap.innerWrap.cObject {
+	90 < .default
+	90.20.10.value = grey-background
+}
 
 tt_content.stdWrap.outerWrap < tt_content.stdWrap.innerWrap
 tt_content.stdWrap.innerWrap.cObject = CASE
@@ -54,18 +43,18 @@ tt_content.stdWrap.innerWrap.cObject {
 
   key.field = layout
 
-  10 < .default
-  10 {
+  90 < .default
+  90 {
   	20.10.value = inner indent-null
   }
 
-  11 < .default
-  11 {
+  91 < .default
+  91 {
   	20.10.value = inner indent-normal
   }
 
-  12 < .default
-  12 {
+  92 < .default
+  92 {
   	20.10.value = inner indent-small
   }
 

@@ -16,6 +16,10 @@
 			<trans-unit id="tx_qxgo_tt_content.layout_indent_small">
 				<source>Small Width</source>
 			</trans-unit>
+
+			<trans-unit id="tx_qxgo_tt_content.section_frame_grey">
+				<source>Grey Background</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
