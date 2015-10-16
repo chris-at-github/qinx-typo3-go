@@ -17,19 +17,18 @@ mod.SHARED.colPos_list >
 TCEFORM.tt_content {
 	layout {
 		addItems {
-			10 = LLL:EXT:qxgo/Resources/Private/Language/locallang_db.xlf:tx_qxgo_tt_content.layout_indent_null
-			11 = LLL:EXT:qxgo/Resources/Private/Language/locallang_db.xlf:tx_qxgo_tt_content.layout_indent_normal
-			12 = LLL:EXT:qxgo/Resources/Private/Language/locallang_db.xlf:tx_qxgo_tt_content.layout_indent_small
+			90 = LLL:EXT:qxgo/Resources/Private/Language/locallang_db.xlf:tx_qxgo_tt_content.layout_indent_null
+			91 = LLL:EXT:qxgo/Resources/Private/Language/locallang_db.xlf:tx_qxgo_tt_content.layout_indent_normal
+			92 = LLL:EXT:qxgo/Resources/Private/Language/locallang_db.xlf:tx_qxgo_tt_content.layout_indent_small
 		}
 		removeItems = 1,2,3
 	}
 
 	section_frame {
-		addItems {
-			90 = Grauer Hintergrund
-			91 = News
+		 addItems {
+			90 = LLL:EXT:qxgo/Resources/Private/Language/locallang_db.xlf:tx_qxgo_tt_content.section_frame_grey
 		}
-		removeItems = 1, 10, 11, 12, 20, 21, 66
+		removeItems = 1, 5, 6, 10, 11, 12, 20, 21, 66
 	}
 }
 
