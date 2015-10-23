@@ -1,6 +1,10 @@
 // ColPos Liste loeschen, sonst sind nicht angegebene Felder nicht bearbeitbar
 mod.SHARED.colPos_list >
 
+// Set the default label and flag
+mod.SHARED.defaultLanguageLabel = Deutsch
+mod.SHARED.defaultLanguageFlag = de.gif
+
 # Page Layouts
 # TCEFORM.pages.layout {
 # 	altLabels {
@@ -35,11 +39,11 @@ TCEFORM.tt_content {
 # RTE
 RTE {
 	default {
-		contentCSS = fileadmin/Resources/Public/Styles/rte.css
+		contentCSS = fileadmin/Resources/Public/Css/rte.css
 
 		proc {
 			allowedClasses := addToList(h1, h2, h3, h4)
-			allowedClasses := addToList(text-important, text-small, text-red, text-green, text-yellow, text-orange)
+			allowedClasses := addToList(text-small)
 			allowedClasses := addToList(link-file-pdf)
 
 	    entryHTMLparser_db {
@@ -50,7 +54,7 @@ RTE {
 	    }
 		}
 
-		buttons.textstyle.tags.span.allowedClasses := addToList(text-important, text-small, text-red, text-green, text-yellow, text-orange)
+		buttons.textstyle.tags.span.allowedClasses := addToList(text-small)
 		buttons.link.properties.class.allowedClasses := addToList(link-file-pdf)
 		buttons.blockstyle.tags.td.allowedClasses := addToList(text-left, text-center, text-right)
 	}
@@ -86,33 +90,14 @@ RTE {
 			value = font-size: 11px;
 		}
 
-		text-important {
-			name = Hervorgeboben
-			value = font-weight: bold; color: #e30613;
-		}
-
-		text-red {
-			name = Text rot
-			value = font-weight: bold; color: #e30613;
-		}
-
-		text-yellow {
-			name = Text gelb
-			value = font-weight: bold; color: #fdc300;
-		}
-
-		text-orange {
-			name = Text orange
-			value = font-weight: bold; color: #ef7d00;
-		}
-
-		text-blue {
-			name = Text blau
-			value = font-weight: bold; color: #294694;
-		}
-
 		link-file-pdf {
 			name = PDF-Link
 		}
 	}
 }
+
+// FE RTE configuration (htmlArea RTE only)
+RTE.default.FE < RTE.default
+RTE.default.FE.FE >
+RTE.default.FE.userLinks >
+RTE.default.FE.userElements >

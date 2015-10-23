@@ -1,3 +1,11 @@
+// Remove class="bodytext" from paragraphs
+lib.parseFunc_RTE {
+	nonTypoTagStdWrap.encapsLines {
+		addAttributes.P.class >
+		addAttributes.P.class.setOnly >
+	}
+}
+
 lib.stdheader {
 	3.headerClass.cObject {
 		30 = TEXT
