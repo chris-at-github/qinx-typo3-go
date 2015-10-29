@@ -1,5 +1,5 @@
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:qxgo/Configuration/TypoScript/Config/setup.t3s">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:qxgo/Configuration/TypoScript/System/setup.t3s">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:qxgo/Configuration/TypoScript/Navigation/setup.t3s">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:qxgo/Configuration/TypoScript/Block/setup.t3s">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:qxgo/Configuration/TypoScript/Page/setup.t3s">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:qxgo/Configuration/TypoScript/Config/" extensions="t3s">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:qxgo/Configuration/TypoScript/System/" extensions="t3s">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:qxgo/Configuration/TypoScript/Navigation/" extensions="t3s">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:qxgo/Configuration/TypoScript/Block/" extensions="t3s">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:qxgo/Configuration/TypoScript/Page/" extensions="t3s">
