@@ -3,11 +3,12 @@
 input[type='text'], input[type='password'], textarea, select {
 	& {
 		width: 100%;
-		border: 1px solid $grey-light;
+		border: 1px solid $grey-lighter;
 	}
 
 	&:focus {
 		outline: 0;
+		border-color: $grey;
 	}
 
 	&.disabled {
@@ -16,11 +17,11 @@ input[type='text'], input[type='password'], textarea, select {
 }
 
 .form-item {
-	margin: 0 0 10px 0;
+	margin: 10px 0 0 0;
 }
 
 .form-item .form-item {
-	margin-bottom: 0;
+	margin-top: 0;
 }
 
 .form-label {
@@ -35,7 +36,7 @@ input[type='text'], input[type='password'], textarea, select {
 ----------------------------------------------------------------------------------------*/
 .form-actions {
 	& {
-		margin: 0 0 10px 0;
+		margin: 10px 0 0 0;
 	}
 
 	input[type='submit'], button, .button {
@@ -78,14 +79,15 @@ a.button {
 	display: inline-block;
 }
 
-// .button-submit {
-// 	background-color: $pink;
-// 	color: $white;
-// }
+.button-submit {
+	background-color: $color-brand;
+	color: $white;
+}
 
-// .button-submit:hover, .button-submit:focus {
-// 	background-color: $darkpink;
-// }
+.button-submit:hover, .button-submit:focus {
+	background-color: $color-brand-dark;
+	color: $black;
+}
 
 .button-small {
 	padding: 5px 9px;
