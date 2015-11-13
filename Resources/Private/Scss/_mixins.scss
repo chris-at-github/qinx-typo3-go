@@ -206,18 +206,18 @@
 
 // Animation | Keyframes
 @mixin keyframes($animation-name) {
-  //@-webkit-keyframes #{$animation-name} {
-  //  @content;
-  //}
-  //@-moz-keyframes #{$animation-name} {
-  //  @content;
-  //}
-  //@-ms-keyframes #{$animation-name} {
-  //  @content;
-  //}
-  //@-o-keyframes #{$animation-name} {
-  //  @content;
-  //}
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
   @keyframes #{$animation-name} {
     @content;
   }
@@ -233,64 +233,18 @@
 
 // Animation Rotate
 // ----------------------------------------------------------------------------------------------------------------
-@mixin animation-rotate($duration: 1s, $degree-from: 0deg, $degree-to: 360deg) {
-  -webkit-animation-name: rotate;
-  -webkit-animation-duration: $duration;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-
-  -moz-animation-name: rotate;
-  -moz-animation-duration: $duration;
-  -moz-animation-iteration-count: infinite;
-  -moz-animation-timing-function: linear;
-
-  -ms-animation-name: rotate;
-  -ms-animation-duration: $duration;
-  -ms-animation-iteration-count: infinite;
-  -ms-animation-timing-function: linear;
-
-  animation-name: rotate;
-  animation-duration: $duration;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-
-  @-ms-keyframes rotate {
+@mixin keyframes-rotate($from, $to) {
+  @include keyframes(rotate) {
     from {
-      transform: rotate($degree-from);
+      transform: rotate($from);
     }
 
     to {
-      transform: rotate($degree-to);
+      transform: rotate($to);
     }
   }
+}
 
-  @-moz-keyframes rotate {
-    from {
-      transform: rotate($degree-from);
-    }
-
-    to {
-      transform: rotate($degree-to);
-    }
-  }
-
-  @-webkit-keyframes rotate {
-    from {
-      transform: rotate($degree-from);
-    }
-
-    to {
-      transform: rotate($degree-to);
-    }
-  }
-
-  @keyframes rotate {
-    from {
-      transform: rotate($degree-from);
-    }
-
-    to {
-      transform: rotate($degree-to);
-    }
-  }
+@mixin animation-rotate($duration: 1s, $delay: 0s) {
+  @include animation('rotate #{$duration} #{$delay} infinite linear');
 }
