@@ -203,3 +203,48 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+// Animation | Keyframes
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($animation) {
+  //-webkit-animation: #{$animation};
+  //-moz-animation: #{$animation};
+  //-ms-animation: #{$animation};
+  //-o-animation: #{$animation};
+  animation: #{$animation};
+}
+
+// Animation Rotate
+// ----------------------------------------------------------------------------------------------------------------
+@mixin keyframes-rotate($from, $to) {
+  @include keyframes(rotate) {
+    from {
+      transform: rotate($from);
+    }
+
+    to {
+      transform: rotate($to);
+    }
+  }
+}
+
+@mixin animation-rotate($duration: 1s, $delay: 0s) {
+  @include animation('rotate #{$duration} #{$delay} infinite linear');
+}
