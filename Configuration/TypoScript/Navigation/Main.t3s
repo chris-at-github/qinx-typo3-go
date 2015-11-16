@@ -5,6 +5,8 @@ navigation.main {
 	special = directory
 	special.value = {$navigation.main}
 
-	2 < .1
 	1.wrap = <nav class="navigation navigation-horizontal"><ul> | </ul></nav>
+
+	2 < .1
+	2.wrap = <ul> | </ul>
 }

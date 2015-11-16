@@ -53,8 +53,37 @@
 	}
 }
 
+// ----------------------------------------------------------------------------------
+// Dl
+.dl-inline {
+	& {
+		@include clearfix;
+	}
+
+	dt {
+		float: left;
+		margin: 0 3px 0 0;
+	}
+
+	dd {
+		float: left;
+		margin: 0 15px 0 0;
+	}
+}
+
 // Listen
 // ---------------------------------------------------------------------------------------------------------------------
+.list-inline {
+	& {
+		@include clearfix;
+		list-style: none;
+	}
+
+	& > li {
+		float: left;
+	}
+}
+
 .list-container {
 	& {
 		list-style: none;
@@ -62,8 +91,9 @@
 
 	& > li {
 		& {
+			margin: 0;
 			padding: 10px 0;
-			border-top: 1px solid $grey-light;
+			border-top: 1px solid $grey-lighter;
 		}
 
 		&:before {
