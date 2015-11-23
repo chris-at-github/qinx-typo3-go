@@ -184,6 +184,11 @@
   @include loop-grid-columns($grid-columns, $class, pull);
   @include loop-grid-columns($grid-columns, $class, push);
   @include loop-grid-columns($grid-columns, $class, offset);
+
+	.col-#{$class}-right {
+		float: right;
+		text-align: right;
+	}
 }
 
 // Fonts
