@@ -14,3 +14,9 @@
 		padding: 0 5px;
 	}
 }
+
+.navigation-vertical {
+	& > ul > li {
+		display: block;
+	}
+}

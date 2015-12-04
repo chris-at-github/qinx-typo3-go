@@ -193,7 +193,7 @@
 
 // Fonts
 // ----------------------------------------------------------------------------------------------------------------
-@mixin font-default($font-size: 14px, $line-height: 1.4) {
+@mixin font-default($font-size: $font-default-size, $line-height: 1.4) {
   font: normal $font-size $font-default;
   line-height: $line-height;
   color: $grey-dark;
