@@ -210,6 +210,7 @@
 }
 
 // Animation | Keyframes
+// ----------------------------------------------------------------------------------------------------------------
 @mixin keyframes($animation-name) {
   @-webkit-keyframes #{$animation-name} {
     @content;
@@ -252,4 +253,15 @@
 
 @mixin animation-rotate($duration: 1s, $delay: 0s) {
   @include animation('rotate #{$duration} #{$delay} infinite linear');
+}
+
+// Color Functions
+// http://webdesign.tutsplus.com/tutorials/bourbon-on-the-rocks-cool-functions-to-improve-your-sass--cms-24798
+// ----------------------------------------------------------------------------------------------------------------
+@function tint($color, $percent) {
+	@return mix(#fff, $color, $percent);
+}
+
+@function shade($color, $percent) {
+	@return mix(#000, $color, $percent);
 }
