@@ -129,8 +129,8 @@
 	& > li {
 		& {
 			margin: 0;
-			padding: 10px 0;
-			border-top: 1px solid $grey-lighter;
+			padding: 5px 0;
+			border-top: 1px solid $grey-light;
 		}
 
 		&:before {
@@ -140,12 +140,12 @@
 
 	& > li:first-child {
 		margin: 0;
-		padding: 0 0 10px 0;
+		padding: 0 0 5px 0;
 		border: 0;
 	}
 
 	& > li:last-child {
-		padding: 10px 0 0 0;
+		padding: 5px 0 0 0;
 	}
 }
 
