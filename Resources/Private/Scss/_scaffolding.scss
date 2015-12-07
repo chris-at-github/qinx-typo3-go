@@ -2,7 +2,10 @@
 // HTML
 body {
   margin: 10px;
-  @include font-default();
+	font-family: $font-default;
+	font-size: $font-default-size;
+	color: $font-default-color;
+	line-height: 1.4;
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
