@@ -57,6 +57,9 @@ config {
 	// Protect mail addresses from spamming
 	spamProtectEmailAddresses = -3
 	spamProtectEmailAddresses_atSubst = @<span style="display:none;">remove-this.</span>
+
+	// display error messages for development
+	contentObjectExceptionHandler = 0
 }
 
 // Condition to set language according to L POST/GET variable
