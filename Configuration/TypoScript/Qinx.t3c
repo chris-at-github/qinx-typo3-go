@@ -56,3 +56,10 @@ pages {
 	# cat=pages; type=int+; label=Page id of home
 	home = 1
 }
+
+plugin.tx_qxgo {
+	view {
+		templateRootPath EXT:qxgo/Resources/Private/Templates/
+		partialRootPath = EXT:qxgo/Resources/Private/Partials/
+		layoutRootPath = EXT:qxgo/Resources/Private/Layouts/
+	}

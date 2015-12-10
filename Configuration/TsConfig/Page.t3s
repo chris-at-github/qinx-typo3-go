@@ -5,6 +5,19 @@ mod.SHARED.colPos_list >
 mod.SHARED.defaultLanguageLabel = Deutsch
 mod.SHARED.defaultLanguageFlag = de.gif
 
+mod {
+	SHARED {
+		defaultLanguageLabel = Deutsch
+		defaultLanguageFlag = de
+	}
+
+	// Show the content element wizard with tabs (for consistency).
+	wizards {
+		newContentElement.renderMode = tabs
+		newContentElement.wizardItems.Content.header = FCE
+	}
+}
+
 # Page Layouts
 # TCEFORM.pages.layout {
 # 	altLabels {

@@ -1,3 +1,22 @@
+plugin.tx_qxgo {
+	view {
+		layoutRootPaths {
+			10 = {$plugin.tx_qxgo.view.layoutRootPath}
+			20 = {$folders.layouts}
+		}
+
+		templateRootPaths {
+			10 = {$plugin.tx_qxgo.view.templateRootPath}
+			20 = {$folders.templates}
+		}
+
+		partialRootPaths {
+			10 = {$plugin.tx_qxgo.view.partialRootPath}
+			20 = {$folders.partials}
+		}
+	}
+}
+
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:qxgo/Configuration/TypoScript/Config/" extensions="t3s">
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:qxgo/Configuration/TypoScript/System/" extensions="t3s">
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:qxgo/Configuration/TypoScript/Navigation/" extensions="t3s">
