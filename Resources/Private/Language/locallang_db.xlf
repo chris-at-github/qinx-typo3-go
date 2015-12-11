@@ -20,6 +20,19 @@
 			<trans-unit id="tx_qxgo_tt_content.section_frame_grey">
 				<source>Grey Background</source>
 			</trans-unit>
+
+			<trans-unit id="tx_qxgo_fce.grid.title">
+				<source>Grid</source>
+			</trans-unit>
+			<trans-unit id="tx_qxgo_fce.grid.description">
+				<source>Create a dynamic grid column row element</source>
+			</trans-unit>
+			<trans-unit id="tx_qxgo_fce.grid.column">
+				<source>Column</source>
+			</trans-unit>
+			<trans-unit id="tx_qxgo_fce.grid.column_width">
+				<source>Column width</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
