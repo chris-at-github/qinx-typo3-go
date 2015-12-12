@@ -53,32 +53,25 @@ TCEFORM.tt_content {
 RTE {
 	default {
 		contentCSS = fileadmin/Resources/Public/Css/rte.css
+		showButtons := removeFromList(underline,line,table,textindicator,about)
 
 		proc {
 			allowedClasses := addToList(h1, h2, h3, h4)
-			allowedClasses := addToList(text-small)
-			allowedClasses := addToList(link-file-pdf)
+			allowedClasses := addToList(text-left, text-center, text-right)
 
 	    entryHTMLparser_db {
         tags {
           span.fixAttrib.style.unset = 1
           span.rmTagIfNoAttrib = 1
         }
+        removeTags := removeFromList(u)
 	    }
 		}
 
-		buttons.textstyle.tags.span.allowedClasses := addToList(text-small)
-		buttons.link.properties.class.allowedClasses := addToList(link-file-pdf)
+		#buttons.textstyle.tags.span.allowedClasses := addToList()
+		#buttons.link.properties.class.allowedClasses := addToList()
 		buttons.blockstyle.tags.td.allowedClasses := addToList(text-left, text-center, text-right)
-	}
-
-	classesAnchor {
-		file {
-			class = link-file-pdf
-			type = file
-			image >
-			altText = PDF-Link
-		}
+		buttons.formatblock.removeItems = header,footer,section,nav,aside,article,address
 	}
 
 	classes {
@@ -98,14 +91,25 @@ RTE {
 			name = Heading 4 (CSS-Class)
 		}
 
-		text-small {
-			name = Kleiner Text
-			value = font-size: 11px;
+		text-left {
+			name = LLL:EXT:qxgo/Resources/Private/Language/locallang_db.xlf:tx_qxgo_rte.text_left
+			value = text-align: left;
 		}
 
-		link-file-pdf {
-			name = PDF-Link
+		text-right {
+			name = LLL:EXT:qxgo/Resources/Private/Language/locallang_db.xlf:tx_qxgo_rte.text_right
+			value = text-align: right;
 		}
+
+		text-center {
+			name = LLL:EXT:qxgo/Resources/Private/Language/locallang_db.xlf:tx_qxgo_rte.text_center
+			value = text-align: center;
+		}
+
+#		text-small {
+#			name = Kleiner Text
+#			value = font-size: 11px;
+#		}
 	}
 }
 

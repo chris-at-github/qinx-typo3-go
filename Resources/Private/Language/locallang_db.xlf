@@ -21,6 +21,16 @@
 				<source>Grey Background</source>
 			</trans-unit>
 
+			<trans-unit id="tx_qxgo_rte.text_left">
+				<source>Align left</source>
+			</trans-unit>
+			<trans-unit id="tx_qxgo_rte.text_right">
+				<source>Align right</source>
+			</trans-unit>
+			<trans-unit id="tx_qxgo_rte.text_center">
+				<source>Align center</source>
+			</trans-unit>
+
 			<trans-unit id="tx_qxgo_fce.grid.title">
 				<source>Grid</source>
 			</trans-unit>
