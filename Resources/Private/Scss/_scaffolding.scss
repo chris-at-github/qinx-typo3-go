@@ -1,5 +1,23 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // HTML
+* {
+	& {
+		box-sizing: border-box;
+
+		transition-property: color, background, border-color;
+		transition-duration: $transition-base-duration;
+		transition-timing-function: $transition-base-function;
+	}
+
+	&:before, &:after {
+		box-sizing: border-box;
+
+		transition-property: color, background, border-color;
+		transition-duration: $transition-base-duration;
+		transition-timing-function: $transition-base-function;
+	}
+}
+
 body {
   margin: 10px;
 	font-family: $font-default;

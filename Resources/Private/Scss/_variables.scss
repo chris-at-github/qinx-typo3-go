@@ -19,10 +19,23 @@ $font-default: 				'Times New', serif !default;
 $font-default-size:		13px !default;
 $font-default-color:	$grey-dark !default;
 
+$font-heading-family: $font-default;
+$font-heading-color: 	$font-default-color;
+
+$font-heading-h1: 52px;
+$font-heading-h2: 34px;
+$font-heading-h3: 24px;
+$font-heading-h4: 18px;
+
 // ---------------------------------------------------------------------------------------------------------------------
 // Grid
-$grid-columns: 			12 !default;
-$grid-gutter-width: 20px !default;
+$grid-columns: 12 !default;
+$grid-gutter-width: 30px !default;
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Transition
+$transition-base-duration: 0.3s;
+$transition-base-function: ease;
 
 // ---------------------------------------------------------------------------------------------------------------------
 $border-radius-default:	2px;
