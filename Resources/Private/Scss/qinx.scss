@@ -30,6 +30,7 @@
 .outer {
 	max-width: 100%;
 	overflow-x: hidden;
+	padding: 30px 0;
 }
 
 .inner {
@@ -43,6 +44,10 @@
 
 	&.indent-small {
 		max-width: 640px;
+	}
+
+	& > *:first-child {
+		margin-top: 0;
 	}
 }
 

@@ -38,6 +38,9 @@ lib.stdheader {
 
 tt_content.stdWrap.innerWrap.cObject = CASE
 tt_content.stdWrap.innerWrap.cObject {
+	key.field = section_frame
+	default.20.10.value = csc-default outer
+
 	90 < .default
 	90.20.10.value = csc-default csc-default-grey
 }
@@ -67,6 +70,6 @@ tt_content.stdWrap.innerWrap.cObject {
   }
 
   default {
-  	20.10.value = inner
+  	20.10.value = inner indent-normal
   }
 }
