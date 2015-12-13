@@ -59,7 +59,8 @@ pages {
 
 plugin.tx_qxgo {
 	view {
-		templateRootPath EXT:qxgo/Resources/Private/Templates/
+		templateRootPath = EXT:qxgo/Resources/Private/Templates/
 		partialRootPath = EXT:qxgo/Resources/Private/Partials/
 		layoutRootPath = EXT:qxgo/Resources/Private/Layouts/
 	}
+}
