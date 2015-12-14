@@ -43,6 +43,9 @@
 			<trans-unit id="tx_qxgo_fce.grid.column_width">
 				<source>Column width</source>
 			</trans-unit>
+			<trans-unit id="tx_qxgo_fce.grid.column_offset">
+				<source>Column offset</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

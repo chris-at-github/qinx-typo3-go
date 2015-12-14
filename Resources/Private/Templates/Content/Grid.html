@@ -13,6 +13,7 @@
 			<flux:form.section name="rows">
 				<flux:form.object name="column" label="LLL:EXT:qxgo/Resources/Private/Language/locallang_db.xlf:tx_qxgo_fce.grid.column">
 					<flux:field.select name="width" label="LLL:EXT:qxgo/Resources/Private/Language/locallang_db.xlf:tx_qxgo_fce.grid.column_width" maxItems="1" items="1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12" />
+					<flux:field.select name="offset" label="LLL:EXT:qxgo/Resources/Private/Language/locallang_db.xlf:tx_qxgo_fce.grid.column_offset" maxItems="1" items=", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12"/>
 				</flux:form.object>
 			</flux:form.section>
 
@@ -34,7 +35,7 @@
 	<f:section name="Main">
 		<div class="row">
 			<f:for each="{rows}" as="obj" iteration="iteration">
-				<div class="col-xs-{obj.column.width}">
+				<div class="col-xs-{obj.column.width} {f:if(condition: obj.column.offset, then: 'col-xs-offset-{obj.column.offset}')}">
 					<flux:content.render area="c{iteration.cycle}" />
 				</div>
 			</f:for>
