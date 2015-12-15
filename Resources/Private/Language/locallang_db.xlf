@@ -30,6 +30,9 @@
 			<trans-unit id="tx_qxgo_rte.text_center">
 				<source>Align center</source>
 			</trans-unit>
+			<trans-unit id="tx_qxgo_rte.text_small">
+				<source>Small text</source>
+			</trans-unit>
 
 			<trans-unit id="tx_qxgo_fce.grid.title">
 				<source>Grid</source>

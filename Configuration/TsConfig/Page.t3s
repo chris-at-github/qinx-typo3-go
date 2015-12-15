@@ -57,7 +57,7 @@ RTE {
 
 		proc {
 			allowedClasses := addToList(h1, h2, h3, h4)
-			allowedClasses := addToList(text-left, text-center, text-right)
+			allowedClasses := addToList(text-left, text-center, text-right, text-small)
 
 	    entryHTMLparser_db {
         tags {
@@ -70,8 +70,10 @@ RTE {
 
 		#buttons.textstyle.tags.span.allowedClasses := addToList()
 		#buttons.link.properties.class.allowedClasses := addToList()
-		buttons.blockstyle.tags.td.allowedClasses := addToList(text-left, text-center, text-right)
-		buttons.formatblock.removeItems = header,footer,section,nav,aside,article,address
+		buttons {
+			blockstyle.tags.td.allowedClasses := addToList(text-left, text-center, text-right)
+			formatblock.removeItems = header,footer,section,nav,aside,article,address
+		}
 	}
 
 	classes {
@@ -106,10 +108,10 @@ RTE {
 			value = text-align: center;
 		}
 
-#		text-small {
-#			name = Kleiner Text
-#			value = font-size: 11px;
-#		}
+		text-small {
+			name = LLL:EXT:qxgo/Resources/Private/Language/locallang_db.xlf:tx_qxgo_rte.text_small
+			value = font-size: 11px;
+		}
 	}
 }
 

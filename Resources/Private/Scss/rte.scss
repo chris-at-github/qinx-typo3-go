@@ -5,10 +5,15 @@
 
 p.text-left, div.text-left,
 p.text-right, div.text-right,
-p.text-center, div.text-center {
+p.text-center, div.text-center,
+p.text-small, div.text-small {
 	/*! sass ignore */
 }
 
 p.h1, div.h1, h2.h1, h3.h1, h4.h1 {
+	/*! sass ignore */
+}
+
+span.text-small, span.text-small {
 	/*! sass ignore */
 }
