@@ -36,16 +36,20 @@ lib.stdheader {
 }
 
 
-tt_content.stdWrap.innerWrap.cObject = CASE
-tt_content.stdWrap.innerWrap.cObject {
+tt_content.stdWrap.outerWrap < tt_content.stdWrap.innerWrap
+tt_content.stdWrap.outerWrap.cObject = CASE
+tt_content.stdWrap.outerWrap.cObject {
 	key.field = section_frame
-	default.20.10.value = csc-default outer
+	default.20 {
+		10.value = csc-default outer
+		20 >
+		30 >
+	}
 
 	90 < .default
 	90.20.10.value = csc-default csc-default-grey
 }
 
-tt_content.stdWrap.outerWrap < tt_content.stdWrap.innerWrap
 tt_content.stdWrap.innerWrap.cObject = CASE
 tt_content.stdWrap.innerWrap.cObject {
 	default {
