@@ -55,13 +55,12 @@
   transition: $transition;
 }
 
-@mixin transition-all($duration: 0.3s, $delay: 0, $property: all) {
+@mixin transition-all($duration: 0.3s, $delay: 0s, $property: all) {
   -webkit-transition: $property $duration ease $delay; /* For Safari 3.1 to 6.0 */
   transition: $property $duration ease $delay;
 }
 
-@mixin transition-one($duration: 0.3s, $delay: 0, $property: all) {
-  -webkit-transition: $property $duration ease $delay; /* For Safari 3.1 to 6.0 */
+@mixin transition-one($property: all, $duration: 0.3s, $delay: 0s) {
   transition: $property $duration ease $delay;
 }
 

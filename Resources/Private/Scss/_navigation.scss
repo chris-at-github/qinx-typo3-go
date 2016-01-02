@@ -35,7 +35,7 @@
 
 		&:hover, &:focus {
 			& > ul {
-				display: block;
+				max-height: 1000px;
 			}
 		}
 	}
@@ -46,8 +46,10 @@
 			top: 20px; left: 0;
 			z-index: 5;
 			min-width: 200px;
-			display: none;
+			max-height: 0;
+			overflow: hidden;
 			background: $white;
+			@include transition-one(max-height);
 		}
 	}
 }
