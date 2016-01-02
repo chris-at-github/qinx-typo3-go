@@ -11,13 +11,43 @@
 	}
 
 	& > ul > li {
-		float: left;
-		padding: 0 5px;
+		& {
+			float: left;
+		}
+
+		a {
+			padding: 0 5px;
+		}
 	}
 }
 
 .navigation-vertical {
 	& > ul > li {
 		display: block;
+	}
+}
+
+.navigation-dropdown {
+	& > ul > li {
+		& {
+			position: relative;
+		}
+
+		&:hover, &:focus {
+			& > ul {
+				display: block;
+			}
+		}
+	}
+
+	& > ul > li > ul {
+		& {
+			position: absolute;
+			top: 20px; left: 0;
+			z-index: 5;
+			min-width: 200px;
+			display: none;
+			background: $white;
+		}
 	}
 }
