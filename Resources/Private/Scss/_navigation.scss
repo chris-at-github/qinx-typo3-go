@@ -19,6 +19,16 @@
 			padding: 0 5px;
 		}
 	}
+
+	&.navigation-right {
+		& {
+			@include clearfix;
+		}
+
+		ul {
+			float: right;
+		}
+	}
 }
 
 .navigation-vertical {
