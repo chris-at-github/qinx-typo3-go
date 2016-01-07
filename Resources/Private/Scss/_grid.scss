@@ -1,7 +1,12 @@
-.row {
- @include make-row;
+@media screen and (min-width: 480px) {
+	.row {
+		@include make-row;
+	}
+
+	@include make-grid-columns;
+	@include make-grid(xs);
 }
 
-@include make-grid-columns;
-@include make-grid(xs);
-@include make-grid(sm);
+@media screen and (min-width: 768px) {
+	@include make-grid(sm);
+}
