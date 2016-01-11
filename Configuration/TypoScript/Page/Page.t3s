@@ -27,6 +27,10 @@ page {
 		10 = {$folders.css}/screen.css
 	}
 
+	meta {
+		viewport = {$meta.viewport}
+	}
+
 	10 = CASE
 	10 {
 		key.field = layout
