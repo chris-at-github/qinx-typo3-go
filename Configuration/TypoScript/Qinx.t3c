@@ -1,3 +1,11 @@
+plugin.tx_qxgo {
+	view {
+		templateRootPath = EXT:qxgo/Resources/Private/Templates/
+		partialRootPath = EXT:qxgo/Resources/Private/Partials/
+		layoutRootPath = EXT:qxgo/Resources/Private/Layouts/
+	}
+}
+
 // Default paths for resources.
 folders {
 	private = fileadmin/Resources/Private
@@ -57,10 +65,10 @@ pages {
 	home = 1
 }
 
-plugin.tx_qxgo {
-	view {
-		templateRootPath = EXT:qxgo/Resources/Private/Templates/
-		partialRootPath = EXT:qxgo/Resources/Private/Partials/
-		layoutRootPath = EXT:qxgo/Resources/Private/Layouts/
-	}
+googleAnalytics {
+	# cat=googleAnalytics; type=boolean; label=Activate Google Analytics Snippet
+	enabled = 0
+
+	# cat=googleAnalytics; type=string; label=Tracking-ID
+	trackingId = UA-123-4
 }
