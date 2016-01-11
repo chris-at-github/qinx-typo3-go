@@ -1,7 +1,18 @@
-.row {
- @include make-row;
+@media screen and (max-width: 480px) {
+	[class^="col"] + [class^="col"] {
+		margin-top: 10px;
+	}
 }
 
-@include make-grid-columns;
-@include make-grid(xs);
-@include make-grid(sm);
+@media screen and (min-width: 480px) {
+	.row {
+		@include make-row;
+	}
+
+	@include make-grid-columns;
+	@include make-grid(xs);
+}
+
+@media screen and (min-width: 768px) {
+	@include make-grid(sm);
+}
