@@ -31,6 +31,17 @@ page {
 		viewport = {$meta.viewport}
 	}
 
+	bodyTagCObject = CASE
+	bodyTagCObject {
+		key.field = layout
+
+		1 = TEXT
+		1.value = <body class="page-fullscreen">
+
+		default = TEXT
+		default.value = <body>
+	}
+
 	10 = CASE
 	10 {
 		key.field = layout
