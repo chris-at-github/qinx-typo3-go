@@ -1,0 +1,22 @@
+// Messages
+// ---------------------------------------------------------------------------------------------------------------------
+.message {
+	& {
+		margin: 10px 0 0 0;
+		padding: 5px;
+		background: $grey;
+		color: $white;
+	}
+
+	li:before {
+		border-color: $white;
+	}
+
+	ul:first-child, ul:first-child > li:first-child, p:first-child {
+		margin-top: 0;
+	}
+
+	p {
+		padding: 0 10px;
+	}
+}
