@@ -46,11 +46,12 @@ class SpriteViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelp
 	 * @see https://css-tricks.com/svg-sprites-use-better-icon-fonts/
 	 *
 	 * @param string $symbol The sprite symbol
+	 * @return string
 	 */
 	public function render($symbol) {
 		$settings = $this->configurationManager->getConfiguration(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_SETTINGS, 'qxgo');
 
-		$file = '';
+		$file = 'fileadmin/Resources/Public/Images/icons.svg';
 		if(empty($settings['spriteFile']) === false) {
 			$file = \TYPO3\CMS\Core\Utility\PathUtility::getAbsoluteWebPath($settings['spriteFile']);
 		}
@@ -58,7 +59,7 @@ class SpriteViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelp
 		$url = $file . '#' . $symbol;
 
 		$output = <<<EOT
-<svg xmlns="http://www.w3.org/2000/svg" class="sprite sprite-{$symbol}">
+<svg xmlns="http://www.w3.org/2000/svg" class="sprite sprite-{$symbol}" preserveAspectRatio="xMinYMin meet" viewbox="0 0 180 51">
 	<use xlink:href="{$url}" />
 </svg>
 EOT;
