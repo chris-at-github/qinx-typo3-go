@@ -21,14 +21,20 @@ $EM_CONF[$_EXTKEY] = array(
 	'uploadfolder' => '0',
 	'createDirs' => '',
 	'clearCacheOnLoad' => 0,
-	'version' => '',
+	'version' => '0.0.1',
 	'constraints' => array(
 		'depends' => array(
-			'typo3' => '6.2',
+			'typo3' => '6.2-7.6.99',
 		),
 		'conflicts' => array(
 		),
 		'suggests' => array(
 		),
+	),
+	'autoload' => array (
+		'psr-4' =>
+			array (
+				'Qinx\\Qxgo\\' => 'Classes',
+			),
 	),
 );
