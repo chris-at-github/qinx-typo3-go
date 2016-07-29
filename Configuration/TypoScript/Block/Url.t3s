@@ -1,0 +1,7 @@
+lib.url {
+	home = TEXT
+	home.typolink {
+		parameter = {$pages.home}
+		returnLast = url
+	}
+}
