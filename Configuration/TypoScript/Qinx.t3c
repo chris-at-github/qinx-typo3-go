@@ -72,3 +72,8 @@ googleAnalytics {
 	# cat=googleAnalytics; type=string; label=Tracking-ID
 	trackingId = UA-123-4
 }
+
+sprite {
+	# cat=svgSprite; type=string; label=Filepath of generated svg sprite
+	path = {$folders.images}/icons.svg
+}

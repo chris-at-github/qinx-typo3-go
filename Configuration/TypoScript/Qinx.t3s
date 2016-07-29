@@ -15,6 +15,12 @@ plugin.tx_qxgo {
 			20 = {$folders.partials}
 		}
 	}
+
+	settings {
+		sprite {
+			path = {$sprite.path}
+		}
+	}
 }
 
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:qxgo/Configuration/TypoScript/Config/" extensions="t3s">

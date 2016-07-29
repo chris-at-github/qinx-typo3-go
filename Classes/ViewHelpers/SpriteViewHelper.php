@@ -63,9 +63,8 @@ class SpriteViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelp
 		$height		= 0;
 		$settings = $this->configurationManager->getConfiguration(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_SETTINGS, 'qxgo');
 
-		$file = 'fileadmin/Resources/Public/Images/icons.svg';
-		if(empty($settings['spriteFile']) === false) {
-			$file = \TYPO3\CMS\Core\Utility\PathUtility::getAbsoluteWebPath($settings['spriteFile']);
+		if(empty($settings['sprite']['path']) === false) {
+			$file = \TYPO3\CMS\Core\Utility\PathUtility::getAbsoluteWebPath($settings['sprite']['path']);
 		}
 
 		$url = $file . '#' . $symbol;
