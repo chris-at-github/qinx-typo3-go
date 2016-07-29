@@ -30,8 +30,6 @@ namespace Qinx\Qxgo\ViewHelpers;
  */
 class SpriteViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper {
 
-	const FILE_INLINE = 'inline'; // Special file value to identify inline SVG sprites.
-
 	/**
 	 * TYPO3's configuration manager
 	 *
@@ -39,6 +37,18 @@ class SpriteViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelp
 	 * @inject
 	 */
 	protected $configurationManager;
+
+	/**
+	 * Initialize arguments.
+	 *
+	 * @return void
+	 */
+	public function initializeArguments() {
+		$this->registerArgument('width', 'int', 'optional width for viewbox attribute', false, 0);
+		$this->registerArgument('height', 'int', 'optional height for viewbox attribute', false, 0);
+
+		parent::initializeArguments();
+	}
 
 	/**
 	 * Render a SVG sprite.
@@ -49,6 +59,8 @@ class SpriteViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelp
 	 * @return string
 	 */
 	public function render($symbol) {
+		$width		= 0;
+		$height		= 0;
 		$settings = $this->configurationManager->getConfiguration(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_SETTINGS, 'qxgo');
 
 		$file = 'fileadmin/Resources/Public/Images/icons.svg';
@@ -58,8 +70,18 @@ class SpriteViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelp
 
 		$url = $file . '#' . $symbol;
 
+		// Width and height are given from view helper attributes
+		if(empty($this->arguments['width']) === false && empty($this->arguments['height']) === false) {
+			$width 	= (int) $this->arguments['width'];
+			$height = (int) $this->arguments['height'];
+		}
+
+		if(empty($width) === false && empty($height) === false) {
+			$viewbox = 'viewbox="0 0 ' . $width . ' ' . $height . '"';
+		}
+
 		$output = <<<EOT
-<svg xmlns="http://www.w3.org/2000/svg" class="sprite sprite-{$symbol}" preserveAspectRatio="xMinYMin meet" viewbox="0 0 180 51">
+<svg xmlns="http://www.w3.org/2000/svg" class="svg-sprite svg-sprite--{$symbol}" preserveAspectRatio="xMinYMin meet" {$viewbox}>
 	<use xlink:href="{$url}" />
 </svg>
 EOT;
