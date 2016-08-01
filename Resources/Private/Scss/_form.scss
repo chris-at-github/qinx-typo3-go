@@ -5,7 +5,7 @@ input[type='text'], input[type='password'], textarea, select {
 		width: 100%;
 		padding: 1px 3px;
 		line-height: 20px;
-		border: 1px solid $grey-lighter;
+		border: 1px solid $grey-light;
 	}
 
 	&:focus {
@@ -14,12 +14,14 @@ input[type='text'], input[type='password'], textarea, select {
 	}
 
 	&.disabled {
-		background: $grey-lighter;
+		background: $grey-light;
 	}
 }
 
 .form-item {
-	margin: 10px 0 0 0;
+	& + .form-item {
+		margin: 10px 0 0 0;
+	}
 }
 
 .form-item .form-item {
@@ -62,7 +64,7 @@ input[type='submit'], button, .button {
 		margin: 0;
 		padding: 7px 15px;
 		border: 0;
-		background: $grey-lighter;
+		background: $grey-light;
 		font-weight: normal;
 		color: $black;
 		line-height: 1;
@@ -71,7 +73,7 @@ input[type='submit'], button, .button {
 	}
 
 	&:hover, &:focus, &:active {
-		background-color: darken($grey-lighter, 15%);
+		background-color: darken($grey-light, 15%);
 		color: $white;
 		text-decoration: none;
 	}
