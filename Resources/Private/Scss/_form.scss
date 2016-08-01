@@ -6,6 +6,7 @@ input[type='text'], input[type='password'], textarea, select {
 		padding: 1px 3px;
 		line-height: 20px;
 		border: 1px solid $grey-light;
+		font-size: $font-default-size;
 	}
 
 	&:focus {
