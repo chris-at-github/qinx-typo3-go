@@ -41,13 +41,13 @@ tt_content.stdWrap.outerWrap.cObject = CASE
 tt_content.stdWrap.outerWrap.cObject {
 	key.field = section_frame
 	default.20 {
-		10.value = csc-default outer
+		10.value = outer csc-default
 		20 >
 		30 >
 	}
 
 	90 < .default
-	90.20.10.value = csc-default csc-default-grey
+	90.20.10.value = outer outer--transparent csc-default
 }
 
 tt_content.stdWrap.innerWrap.cObject = CASE

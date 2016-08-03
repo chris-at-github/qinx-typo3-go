@@ -43,7 +43,7 @@ TCEFORM.tt_content {
 
 	section_frame {
 		 addItems {
-			90 = LLL:EXT:qxgo/Resources/Private/Language/locallang_db.xlf:tx_qxgo_tt_content.section_frame_grey
+			90 = LLL:EXT:qxgo/Resources/Private/Language/locallang_db.xlf:tx_qxgo_tt_content.section_frame_transparent
 		}
 		removeItems = 1, 5, 6, 10, 11, 12, 20, 21, 66
 	}
