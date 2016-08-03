@@ -127,6 +127,21 @@ a.button {
 	letter-spacing: 1px;
 }
 
+// Button Icon
+// ---------------------------------------------------------------------------------------------------------------------
+.button-icon {
+	& {
+		@extend .icon !optional;
+		padding: 7px 0;
+		min-width: 45px;
+		text-align: center;
+	}
+
+	&:before {
+		transition-duration: 0s;
+	}
+}
+
 /* form-inline
 ----------------------------------------------------------------------------------------*/
 .form-inline {
