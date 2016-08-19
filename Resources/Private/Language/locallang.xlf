@@ -6,6 +6,12 @@
 			<trans-unit id="layout.logo.title">
 				<source>Link to homepage</source>
 			</trans-unit>
+			<trans-unit id="layout.search.placeholder">
+				<source>Search for</source>
+			</trans-unit>
+			<trans-unit id="layout.search.submit">
+				<source>Search</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
